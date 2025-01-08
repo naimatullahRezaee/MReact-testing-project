@@ -1,3 +1,37 @@
+import ServicesItem from "./ServicesItem";
+
+const ServicesInfo = [
+  {
+    icon: "bi bi-briefcase",
+    title: "WEB DESIGN",
+    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magniadipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
+  },
+  {
+    icon: "bi bi-card-checklist",
+    title: "WEB DEVELOPMENT",
+    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magniadipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
+  },
+  {
+    icon: "bi bi-bar-chart",
+    title: "PHOTOGRAPHY",
+    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magniadipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
+  },
+  {
+    icon: "bi bi-binoculars",
+    title: "RESPONSIVE DESIGN",
+    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magniadipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
+  },
+  {
+    icon: "bi bi-brightness-high",
+    title: "GRAPHIC DESIGN",
+    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magniadipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
+  },
+  {
+    icon: "bi bi-calendar4-week",
+    title: "MARKETING SERVICES",
+    info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magniadipisci eaque autem fugiat! Quia, provident vitae! Magni tempora perferendis eum non provident.",
+  },
+];
 function Services() {
   return (
     <section id="services">
@@ -9,96 +43,12 @@ function Services() {
           </p>
         </div>
         <div className="row">
-          <div className="col-4">
-            <div className="service-box">
-              <div className="service-icon">
-                <i className="bi bi-briefcase"></i>
-              </div>
-              <div className="service-content">
-                <h3 className="service-title">WEB DESIGN</h3>
-                <p className="service-info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-4">
-            <div className="service-box">
-              <div className="service-icon">
-                <i className="bi bi-card-checklist"></i>
-              </div>
-              <div className="service-content">
-                <h3 className="service-title">WEB DEVELOPMENT</h3>
-                <p className="service-info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-4">
-            <div className="service-box">
-              <div className="service-icon">
-                <i className="bi bi-bar-chart"></i>
-              </div>
-              <div className="service-content">
-                <h3 className="service-title">PHOTOGRAPHY</h3>
-                <p className="service-info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-4">
-            <div className="service-box">
-              <div className="service-icon">
-                <i className="bi bi-binoculars"></i>
-              </div>
-              <div className="service-content">
-                <h3 className="service-title">RESPONSIVE DESIGN</h3>
-                <p className="service-info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-4">
-            <div className="service-box">
-              <div className="service-icon">
-                <i className="bi bi-brightness-high"></i>
-              </div>
-              <div className="service-content">
-                <h3 className="service-title">GRAPHIC DESIGN</h3>
-                <p className="service-info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-4">
-            <div className="service-box">
-              <div className="service-icon">
-                <i className="bi bi-calendar4-week"></i>
-              </div>
-              <div className="service-content">
-                <h3 className="service-title">MARKETING SERVICES</h3>
-                <p className="service-info">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-                  adipisci eaque autem fugiat! Quia, provident vitae! Magni
-                  tempora perferendis eum non provident.
-                </p>
-              </div>
-            </div>
-          </div>
+          <ServicesItem {...ServicesInfo[0]} />
+          <ServicesItem {...ServicesInfo[1]} />
+          <ServicesItem {...ServicesInfo[2]} />
+          <ServicesItem {...ServicesInfo[3]} />
+          <ServicesItem {...ServicesInfo[4]} />
+          <ServicesItem {...ServicesInfo[5]} />
         </div>
       </div>
     </section>

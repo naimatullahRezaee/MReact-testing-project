@@ -153,6 +153,9 @@ header {
 .blog-content .blog-desc {
   color: #4e4e4e;
 }
+.post-date span {
+  padding-right: 10px;
+}
 .blog-footer {
   padding: 10px 15px;
   background: rgba(247, 247, 247, 1);

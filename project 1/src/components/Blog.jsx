@@ -1,3 +1,31 @@
+import BlogItem from "./BlogItem";
+import img1 from "../assets/images/post-1.jpg";
+import img2 from "../assets/images/post-2.jpg";
+import img3 from "../assets/images/post-3.jpg";
+
+const BlogInfo = [
+  {
+    pic: `${img1}`,
+    title: "post title 1",
+    desc: "Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec,egestas non nisi.",
+    tagname: "Ali Karimi",
+    time: "10 min",
+  },
+  {
+    pic: `${img2}`,
+    title: "post title 2",
+    desc: "Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec,egestas non nisi.",
+    tagname: "Marwa Ahmadi",
+    time: "30 min",
+  },
+  {
+    pic: `${img3}`,
+    title: "post title 3",
+    desc: "Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec,egestas non nisi.",
+    tagname: "Reza Muradi",
+    time: "20 min",
+  },
+];
 function Blog() {
   return (
     <section id="blog">
@@ -9,75 +37,9 @@ function Blog() {
           </p>
         </div>
         <div className="row">
-          <div className="col-4">
-            <div className="blog-box">
-              <div className="blog-img">
-                <img src="./img/post-1.jpg" className="img-fluid" />
-              </div>
-              <div className="blog-content">
-                <h3 className="blog-title">post title 1</h3>
-                <p className="blog-desc">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
-                </p>
-              </div>
-              <div className="blog-footer">
-                <div className="post-author">
-                  <p className="author">Milad Bahrami</p>
-                </div>
-                <div className="post-date">
-                  <span className="bi bi-clock"></span> 10 min
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-4">
-            <div className="blog-box">
-              <div className="blog-img">
-                <img src="./img/post-2.jpg" className="img-fluid" />
-              </div>
-              <div className="blog-content">
-                <h3 className="blog-title">post title 1</h3>
-                <p className="blog-desc">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
-                </p>
-              </div>
-              <div className="blog-footer">
-                <div className="post-author">
-                  <p className="author">Milad Bahrami</p>
-                </div>
-                <div className="post-date">
-                  <span className="bi bi-clock"></span> 10 min
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-4">
-            <div className="blog-box">
-              <div className="blog-img">
-                <img src="./img/post-3.jpg" className="img-fluid" />
-              </div>
-              <div className="blog-content">
-                <h3 className="blog-title">post title 1</h3>
-                <p className="blog-desc">
-                  Proin eget tortor risus. Pellentesque in ipsum id orci porta
-                  dapibus. Praesent sapien massa, convallis a pellentesque nec,
-                  egestas non nisi.
-                </p>
-              </div>
-              <div className="blog-footer">
-                <div className="post-author">
-                  <p className="author">Milad Bahrami</p>
-                </div>
-                <div className="post-date">
-                  <span className="bi bi-clock"></span> 10 min
-                </div>
-              </div>
-            </div>
-          </div>
+          <BlogItem {...BlogInfo[0]} />
+          <BlogItem {...BlogInfo[1]} />
+          <BlogItem {...BlogInfo[2]} />
         </div>
       </div>
     </section>
