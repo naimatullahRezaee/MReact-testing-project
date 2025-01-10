@@ -1,19 +1,15 @@
+import { useState } from "react";
+
 function App() {
-  const eventHandler = (e) => {
-    console.log(e.target.value);
+  const [num, setNum] = useState(0);
+
+  const clicked = () => {
+    setNum(num + 1);
   };
   return (
     <>
-      <form action="">
-        <input type="checkbox" value="check 1" onChange={eventHandler} /> Check
-        1 <br />
-        <input type="checkbox" value="check 2" onChange={eventHandler} /> Check
-        2 <br />
-        <input type="checkbox" value="check 3" onChange={eventHandler} /> Check
-        3 <br />
-        <input type="checkbox" value="check 4" onChange={eventHandler} /> Check
-        4 <br />
-      </form>
+      <h2>{num}</h2>
+      <button onClick={clicked}>Increase</button>
     </>
   );
 }
