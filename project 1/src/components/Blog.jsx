@@ -5,6 +5,7 @@ import img3 from "../assets/images/post-3.jpg";
 
 const BlogInfo = [
   {
+    id: 1,
     pic: `${img1}`,
     title: "post title 1",
     desc: "Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec,egestas non nisi.",
@@ -12,6 +13,7 @@ const BlogInfo = [
     time: "10 min",
   },
   {
+    id: 2,
     pic: `${img2}`,
     title: "post title 2",
     desc: "Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec,egestas non nisi.",
@@ -19,6 +21,7 @@ const BlogInfo = [
     time: "30 min",
   },
   {
+    id: 3,
     pic: `${img3}`,
     title: "post title 3",
     desc: "Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec,egestas non nisi.",
@@ -37,9 +40,9 @@ function Blog() {
           </p>
         </div>
         <div className="row">
-          <BlogItem {...BlogInfo[0]} />
-          <BlogItem {...BlogInfo[1]} />
-          <BlogItem {...BlogInfo[2]} />
+          {BlogInfo.map((blog) => (
+            <BlogItem key={blog.id} {...blog} />
+          ))}
         </div>
       </div>
     </section>

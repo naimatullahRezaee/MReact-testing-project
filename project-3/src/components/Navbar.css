@@ -1,0 +1,13 @@
+ul {
+  background-color: darkslategrey;
+
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+ul li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
