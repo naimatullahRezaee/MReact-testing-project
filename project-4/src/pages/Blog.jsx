@@ -1,5 +1,12 @@
+import MyNavbar from "../Components/Navbar";
+
 function Blog() {
-  return <h1>Blog Page</h1>;
+  return (
+    <div>
+      <MyNavbar />
+      <h1>Blog page</h1>
+    </div>
+  );
 }
 
 export default Blog;
