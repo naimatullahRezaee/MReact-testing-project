@@ -3,38 +3,11 @@ import MyNavbar from "../Components/Navbar";
 import ImageProgramming from "../assets/images/programming.svg";
 import CourseItem from "../Components/CourseItem";
 import { useState } from "react";
-import ReactImage from "../assets/images/react.jpg";
-import ReduxImage from "../assets/images/redux.jpg";
-import NextImage from "../assets/images/next.jpg";
-import PythonImage from "../assets/images/python.jpg";
+
 import Footer from "../Components/Footer";
+import { courseData } from "../Data";
 function Home() {
-  const [courses, setCourses] = useState([
-    {
-      id: 1,
-      title: "دوره ریکت ",
-      desc: "آموزش پروژه محور ریکت  از مقدماتی تا پیشرفته",
-      img: ReactImage,
-    },
-    {
-      id: 2,
-      title: "دوره ریدکس ",
-      desc: "آموزش ریدکس پروژه محور از مقدماتی تا پیشرفته",
-      img: ReduxImage,
-    },
-    {
-      id: 3,
-      title: "دوره نیکست ",
-      desc: "آموزش نیکست از صفر تا صد پروژه محور",
-      img: NextImage,
-    },
-    {
-      id: 4,
-      title: "دوره پایتون ",
-      desc: "آموزش پایتون مقدماتی تا پیشرفته",
-      img: PythonImage,
-    },
-  ]);
+  const [courses, setCourses] = useState(courseData);
 
   return (
     <div>
