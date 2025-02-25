@@ -43,6 +43,9 @@ function MyNavbar() {
               <NavLink to="/panel" className="nav-link">
                 پنل
               </NavLink>
+              <NavLink to="/login" className="nav-link">
+                ورود
+              </NavLink>
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
