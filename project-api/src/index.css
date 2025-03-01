@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Lalazar';
+    src: url('./assets/fonts/Lalezar.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'yakan';
+    src: url('./assets/fonts/Yekan.ttf') format('truetype');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'yakan', sans-serif;
+}
+
+.lalazar{
+    font-family: 'Lalazar', sans-serif;
+}
