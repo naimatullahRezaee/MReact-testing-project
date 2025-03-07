@@ -1,9 +1,10 @@
-import image1 from "../../assets/images/image1.jpg"
+
 import Card from 'react-bootstrap/Card';
 import { IoTimeOutline } from "react-icons/io5";
 import { TiArrowLeftThick } from "react-icons/ti";
 
 import './ArticleItem.css'
+import { Link } from "react-router-dom";
 
 function ArticleItem(props) {
   console.log(props);
@@ -17,9 +18,11 @@ function ArticleItem(props) {
         <Card.Text> {props.desc}
 
         </Card.Text>
+        <Link to={`/article/${props.id}`}>
         <span className="read-more">
             <span> ادامه مقاله <TiArrowLeftThick size='25px' /> </span>
         </span>
+        </Link>
         
       </Card.Body>
       <Card.Footer className="d-flex justify-content-between align-items-center py-3">
