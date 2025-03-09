@@ -1,29 +1,57 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useState} from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import Navbar from "../../Components/Navbar/Navbar";
 import { BsPencilSquare } from "react-icons/bs";
 import { BiTimeFive, BiCategoryAlt } from "react-icons/bi";
 import { MdDelete, MdOutlineEditCalendar } from "react-icons/md";
 import "./Articles.css";
 
+import Swal from "sweetalert2";
 
 function Article() {
 
   const [articleData, setArticleData] = useState({});
 
-  
+  const navigate = useNavigate()
   const articleId = useParams().articleId;
 
   useEffect(() => {
     axios
       .get(`http://localhost:5000/articles/${articleId}`)
       .then((response) => {
-        console.log("hello",response.data.image);
+
         
         setArticleData(response.data)  });
   }, []);
+
+
+  const deleteArticleHandler = (articleId) => {
+
+    Swal.fire({
+      title: "مطمین هستی که می خواهی حذف کنید",
+     
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "بلی",
+      cancelButtonText: "خیر"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "مقاله با موفقیت حذف شد",
+          
+          icon: "success"
+        });
+        axios.delete(`http://localhost:5000/articles/${articleId}`)
+        navigate('/')
+      }
+    });
+  }
+
+  
 
   return (
     <>
@@ -52,12 +80,17 @@ function Article() {
                 </p>
               </div>
               <div className="cardFooter">
-                <Button variant="outline-danger">
+
+                <Button onClick={()=> deleteArticleHandler(articleId)}  variant="outline-danger">
                   <MdDelete size="25px" /> حذف مقاله
                 </Button>
-                <Button variant="outline-primary">
+
+              <Link to={`/edit-article/${articleId}`}>
+              
+                <Button  variant="outline-primary">
                   <MdOutlineEditCalendar size="25px" /> ویرایش مقاله
                 </Button>
+              </Link>  
               </div>
             </div>
           </Col>
